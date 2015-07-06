@@ -1,24 +1,26 @@
 package com.thecomiccatalog.servlet;
 
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
+import java.util.UUID;
+
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.thecomiccatalog.beans.User;
+import com.thecomiccatalog.beans.Comic;
 
 /**
- * Servlet implementation class SecurityServlet
+ * Servlet implementation class ComicServlet
  */
-public class SecurityServlet extends HttpServlet {
+public class ComicServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SecurityServlet() {
+    public ComicServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,13 +36,10 @@ public class SecurityServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User user = new User();
-		user.setUserName(request.getParameter("userName"));
-		user.setPassword(request.getParameter("password"));
-		//response.getWriter().write("Hola " + user.getUserName());
-		RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/security/index.jsp");
-		dispatcher.forward(request, response);
-		
+		Comic comic = new Comic();
+		comic.setDescription(request.getParameter("description"));
+		comic.setTitle(request.getParameter("title"));
+		comic.setId(UUID.randomUUID());
 	}
 
 }

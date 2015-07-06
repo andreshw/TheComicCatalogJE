@@ -7,11 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/SecurityServlet" method="post">
+	<form action="../../SecurityServlet" method="post">
 		User Name:
-		<input type="text" id="userName" />
+		<input type="text" id="userName" name="userName"/>
 		Password:
-		<input type="password" id="password"/>
+		<input type="password" id="password" name="password"/>
 		<input type="submit" value="login"/>
 	</form>
 </body>

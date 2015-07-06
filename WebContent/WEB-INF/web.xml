@@ -9,4 +9,20 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>SecurityServlet</servlet-name>
+    <servlet-class>com.thecomiccatalog.servlet.SecurityServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ComicServlet</servlet-name>
+  	<servlet-class>com.thecomiccatalog.servlet.ComicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecurityServlet</servlet-name>
+    <url-pattern>/SecurityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SecurityServlet</servlet-name>
+  	<url-pattern>/ComicServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>The Comic Catalog</title>
+<title>Insert title here</title>
 </head>
 <body>
-Hola Mundo!!!
+	<h1>Wellcome to the Comic Catalog</h1>
+	<div>
+		<ul>
+			<li>
+				Comics
+			</li>
+		</ul>
+	</div>
 </body>
 </html>
